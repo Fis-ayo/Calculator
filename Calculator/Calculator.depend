@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1708808364 source:c:\users\user\documents\internship\calculator\main.cpp
+	<iostream>
+	"Calculations.h"
+
+1708806537 c:\users\user\documents\internship\calculator\calculations.h
+
+1708810179 source:c:\users\user\documents\internship\calculator\calculations.cpp
+	"Calculations.h"
+	<iostream>
+	<string>
+	<cmath>
+
