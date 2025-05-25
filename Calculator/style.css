@@ -1,0 +1,143 @@
+:root{
+    --bg: #1c1c1c;
+    --text: white;
+    --btn-bg: #333;
+    --btn-number: #505050;
+    --btn-operator: #ff9500;
+    --btn-clear: #a5a5a5;
+    --btn-text-dark: black;
+  }
+  
+  
+  .light-mode {
+    --bg: #f0f0f0;
+    --text: #000;
+    --btn-bg: #ddd;
+    --btn-number: #fff;
+    --btn-operator: #ff9500;
+    --btn-clear: #ccc;
+    --btn-text-dark: black;
+  }
+  
+  
+  body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .title {
+      color: #5C6AC4;
+  }
+  
+  /* Calculator Container */
+  .calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: var(--bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  }
+  
+  #display{
+    padding: 20px;
+    font-size: 3em;
+    text-align: right;
+    background-color: var(--bg);
+    color: var(--text);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button.btn{
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--btn-bg);
+    color: var(--text);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  button.btn:active{
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.4);
+  }
+  
+  /* Number buttons */
+  button.number{
+    background-color: var(--btn-number);
+    color: var(--text);
+  }
+  
+  /* Operator buttons */
+  button.operator,
+  button.equal {
+    background-color: var(--btn-operator);
+    color: white;
+  }
+  
+  /* Clear and backspace */
+  button.clear,
+  button.backspace {
+    background-color: var(--btn-clear);
+    color: var(--btn-text-dark);
+  }
+  
+  
+  #themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--btn-clear);
+    color: var(--btn-text-dark);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  
+  @media screen and (max-width: 400px) {
+    .calculator {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    #display {
+      font-size: 2.5em;
+      padding: 15px;
+    }
+  
+    button.btn {
+      height: 50px;
+      font-size: 1.2em;
+    }
+  
+    #themeToggle {
+      top: 10px;
+      right: 10px;
+      font-size: 1em;
+      padding: 8px;
+    }
+  }
+    
